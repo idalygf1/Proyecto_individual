@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pedidos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Prodcuto</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Nombre del cliente</th>
+                <th>Direccion</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for objeto in lista_pedidos %}
+            
+                <tr>
+                    <td>{{ objeto.producto }}</td>
+                    <td>{{ objeto.cantidad }}</td>
+                    <td>{{ objeto.subtotal }}</td>
+                    <td>{{ objeto.nombre_cliente }}</td>
+                    <td>{{ objeto.direccion }}</td>
+                    <td>{{ objeto.telefono }}</td>
+                    <td>{{ objeto.email }}</td>
+                    <td>{{ objeto.fecha }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>
